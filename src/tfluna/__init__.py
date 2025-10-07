@@ -1,1 +1,1 @@
-from .tfluna import TfLuna
+from .tfluna import TFLuna

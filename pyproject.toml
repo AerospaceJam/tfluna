@@ -1,6 +1,39 @@
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
-]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "tfluna"
+version = "0.2.0"
+description = "A modern, typed Python library to read measurements from a TF-Luna LiDAR sensor."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT License" }
+authors = [
+    { name = "Clément Nussbaumer", email = "clement@astutus.org" },
+    { name = "Henry Martin", email = "henrymartin.co@outlook.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: System :: Hardware",
+]
+
+dependencies = [
+    "pyserial>=3.5",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/AerospaceJam/tfluna"
+"Bug Tracker" = "https://github.com/AerospaceJam/tfluna/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18.2",
+    "types-pyserial>=3.5.0.20251001",
+]
